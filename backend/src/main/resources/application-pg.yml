@@ -1,0 +1,16 @@
+zblog:
+  database-type: pg
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/zblog
+    driver-class-name: org.postgresql.Driver
+    username: zblog
+    password: changeme
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none
+  flyway:
+    enabled: false
+    locations: classpath:db/migration/pg

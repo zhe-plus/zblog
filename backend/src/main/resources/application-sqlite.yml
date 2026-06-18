@@ -1,0 +1,14 @@
+zblog:
+  database-type: sqlite
+
+spring:
+  datasource:
+    url: jdbc:sqlite:data/zblog.db
+    driver-class-name: org.sqlite.JDBC
+  jpa:
+    database-platform: org.sqlite.hibernate.dialect.SQLiteDialect
+    hibernate:
+      ddl-auto: none
+  flyway:
+    enabled: false
+    locations: classpath:db/migration/sqlite
